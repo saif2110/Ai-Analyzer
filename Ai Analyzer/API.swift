@@ -17,7 +17,7 @@ protocol GetDataProtocall {
 
 class APIModels {
     
-    
+    static var shared = APIModels()
     
     var PlantDetailsDelegate: GetDataProtocall?
     

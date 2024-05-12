@@ -17,8 +17,6 @@ class ViewController: UIViewController, GetDataProtocall {
     @IBOutlet weak var textCount: UILabel!
     @IBOutlet weak var placeholderLabel:UITextView!
     
-    let viewModel = APIModels()
-    
     let Placeholder = "\n\nEnter or paste your long text here to get summary."
     
     override func viewDidLoad() {
@@ -26,7 +24,7 @@ class ViewController: UIViewController, GetDataProtocall {
         placeholderLabel.delegate = self
         placeholderLabel.text = Placeholder
         placeholderLabel.textColor = UIColor.lightGray
-        viewModel.PlantDetailsDelegate = self
+        APIModels.shared.PlantDetailsDelegate = self
     }
     
     @IBAction func pasteBut(_ sender: Any) {
@@ -41,7 +39,19 @@ class ViewController: UIViewController, GetDataProtocall {
     }
     
     @IBAction func lenghtSumaary(_ sender: UISlider) {
-        print(sender.value)
+        
+        if sender.value < 1 {
+            lengthOfSummary = "very short"
+        }else if sender.value < 2 {
+            lengthOfSummary = "short"
+        }else if sender.value < 3 {
+            lengthOfSummary = "medium"
+        }else if sender.value < 4 {
+            lengthOfSummary = "long"
+        }else if sender.value < 5 {
+            lengthOfSummary = "very long"
+        }
+        
     }
     
     @IBAction func submitButton(_ sender: Any) {
@@ -50,7 +60,14 @@ class ViewController: UIViewController, GetDataProtocall {
         
         let texts = splitTextIntoThreeParts(text: placeholderLabel.text)
         
-        viewModel.hitapi(params: ["startingText" : texts.start,"midText":texts.mid,"endText":texts.end, "length":"very long"])
+        DispatchQueue.main.async {
+            let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc = story.instantiateViewController(withIdentifier: "Loading") as! Loading
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+       
+        APIModels.shared.hitapi(params: ["startingText" : texts.start,"midText":texts.mid,"endText":texts.end, "length": lengthOfSummary])
         
     }
     
