@@ -12,7 +12,15 @@ class Loading: UIViewController,GetDataProtocall {
     
     func getData(data: SummaryData) {
         self.dismiss(animated: true) {
-            
+            if let topController = UIApplication.topViewController() {
+                DispatchQueue.main.async {
+                    let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+                    let vc = story.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
+                    vc.SummaryData = data
+                    vc.modalPresentationStyle = .fullScreen
+                    topController.present(vc, animated: true)
+                }
+            }
         }
     }
 

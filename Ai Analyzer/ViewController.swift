@@ -57,6 +57,7 @@ class ViewController: UIViewController, GetDataProtocall {
     @IBAction func submitButton(_ sender: Any) {
         
         guard placeholderLabel.text.count > 3 else { return }
+        guard placeholderLabel.text != Placeholder else { return }
         
         let texts = splitTextIntoThreeParts(text: placeholderLabel.text)
         
@@ -71,28 +72,14 @@ class ViewController: UIViewController, GetDataProtocall {
         
     }
     
-    func splitTextIntoThreeParts(text: String) -> (start: String, mid: String, end: String) {
-        if text.count > 500 {
-            let partLength = text.count / 3
-            let startIndex = text.index(text.startIndex, offsetBy: partLength)
-            let endIndex = text.index(text.endIndex, offsetBy: -partLength)
-            
-            let startText = String(text[..<startIndex])
-            let midText = String(text[startIndex..<endIndex])
-            let endText = String(text[endIndex...])
-            
-            return (start: startText, mid: midText, end: endText)
-        } else {
-            // If text is not longer than 500 characters, return it as is in the start, and leave mid and end empty.
-            return (start: text, mid: text, end: text)
-        }
-    }
     
 }
 
 extension ViewController : UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        makeTextFilled()
+        if placeholderLabel.text == Placeholder {
+            makeTextFilled()
+        }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -119,5 +106,23 @@ extension ViewController : UITextViewDelegate {
         placeholderLabel.font = .systemFont(ofSize: 14)
         placeholderLabel.textAlignment = .center
         textCount.text = "0"
+    }
+    
+}
+
+func splitTextIntoThreeParts(text: String) -> (start: String, mid: String, end: String) {
+    if text.count > 500 {
+        let partLength = text.count / 3
+        let startIndex = text.index(text.startIndex, offsetBy: partLength)
+        let endIndex = text.index(text.endIndex, offsetBy: -partLength)
+        
+        let startText = String(text[..<startIndex])
+        let midText = String(text[startIndex..<endIndex])
+        let endText = String(text[endIndex...])
+        
+        return (start: startText, mid: midText, end: endText)
+    } else {
+        // If text is not longer than 500 characters, return it as is in the start, and leave mid and end empty.
+        return (start: text, mid: text, end: text)
     }
 }

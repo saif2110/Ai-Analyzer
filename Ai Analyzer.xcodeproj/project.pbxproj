@@ -14,11 +14,17 @@
 		6A40231A2BF11287007E2664 /* Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A4023192BF11287007E2664 /* Lottie.json */; };
 		6A40231D2BF112AD007E2664 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 6A40231C2BF112AD007E2664 /* Lottie */; };
 		6A40231F2BF11361007E2664 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A40231E2BF11361007E2664 /* Loading.swift */; };
+		6A5FB5672BF2547400C004CA /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5FB5652BF2547400C004CA /* DetailsVC.swift */; };
 		6AA280C32BF0A0AB00B94298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA280C22BF0A0AB00B94298 /* AppDelegate.swift */; };
 		6AA280C72BF0A0AB00B94298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA280C62BF0A0AB00B94298 /* ViewController.swift */; };
 		6AA280CA2BF0A0AB00B94298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA280C82BF0A0AB00B94298 /* Main.storyboard */; };
 		6AA280CC2BF0A0AC00B94298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA280CB2BF0A0AC00B94298 /* Assets.xcassets */; };
 		6AA280CF2BF0A0AC00B94298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA280CD2BF0A0AC00B94298 /* LaunchScreen.storyboard */; };
+		6AB341602BF28C7E006BA833 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3415F2BF28C7E006BA833 /* TabBarController.swift */; };
+		6AB341622BF28DF4006BA833 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB341612BF28DF4006BA833 /* CameraViewController.swift */; };
+		6AB341642BF38171006BA833 /* HIstoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB341632BF38171006BA833 /* HIstoryViewController.swift */; };
+		6AB341682BF3A7B4006BA833 /* WelcomeEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB341662BF3A7B4006BA833 /* WelcomeEnd.swift */; };
+		6AB341692BF3A7B4006BA833 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB341672BF3A7B4006BA833 /* Welcome.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,7 @@
 		6A4023172BF0E1E5007E2664 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		6A4023192BF11287007E2664 /* Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lottie.json; sourceTree = "<group>"; };
 		6A40231E2BF11361007E2664 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		6A5FB5652BF2547400C004CA /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		6AA280BF2BF0A0AB00B94298 /* Ai Analyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ai Analyzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA280C22BF0A0AB00B94298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AA280C62BF0A0AB00B94298 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +41,11 @@
 		6AA280CB2BF0A0AC00B94298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AA280CE2BF0A0AC00B94298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AA280D02BF0A0AC00B94298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AB3415F2BF28C7E006BA833 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6AB341612BF28DF4006BA833 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		6AB341632BF38171006BA833 /* HIstoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIstoryViewController.swift; sourceTree = "<group>"; };
+		6AB341662BF3A7B4006BA833 /* WelcomeEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeEnd.swift; sourceTree = "<group>"; };
+		6AB341672BF3A7B4006BA833 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,7 @@
 		6AA280C12BF0A0AB00B94298 /* Ai Analyzer */ = {
 			isa = PBXGroup;
 			children = (
+				6AB341652BF3A7B4006BA833 /* Welcome */,
 				6A4023192BF11287007E2664 /* Lottie.json */,
 				6A4023172BF0E1E5007E2664 /* APIManager.swift */,
 				6A4023152BF0DF63007E2664 /* API.swift */,
@@ -79,8 +92,21 @@
 				6AA280CD2BF0A0AC00B94298 /* LaunchScreen.storyboard */,
 				6AA280D02BF0A0AC00B94298 /* Info.plist */,
 				6A40231E2BF11361007E2664 /* Loading.swift */,
+				6A5FB5652BF2547400C004CA /* DetailsVC.swift */,
+				6AB3415F2BF28C7E006BA833 /* TabBarController.swift */,
+				6AB341612BF28DF4006BA833 /* CameraViewController.swift */,
+				6AB341632BF38171006BA833 /* HIstoryViewController.swift */,
 			);
 			path = "Ai Analyzer";
+			sourceTree = "<group>";
+		};
+		6AB341652BF3A7B4006BA833 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				6AB341662BF3A7B4006BA833 /* WelcomeEnd.swift */,
+				6AB341672BF3A7B4006BA833 /* Welcome.storyboard */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +180,7 @@
 				6AA280CC2BF0A0AC00B94298 /* Assets.xcassets in Resources */,
 				6A4023142BF0DF60007E2664 /* PrivacyInfo.xcprivacy in Resources */,
 				6AA280CA2BF0A0AB00B94298 /* Main.storyboard in Resources */,
+				6AB341692BF3A7B4006BA833 /* Welcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,8 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A4023182BF0E1E5007E2664 /* APIManager.swift in Sources */,
+				6A5FB5672BF2547400C004CA /* DetailsVC.swift in Sources */,
+				6AB341682BF3A7B4006BA833 /* WelcomeEnd.swift in Sources */,
+				6AB341642BF38171006BA833 /* HIstoryViewController.swift in Sources */,
 				6AA280C72BF0A0AB00B94298 /* ViewController.swift in Sources */,
 				6A40231F2BF11361007E2664 /* Loading.swift in Sources */,
+				6AB341602BF28C7E006BA833 /* TabBarController.swift in Sources */,
+				6AB341622BF28DF4006BA833 /* CameraViewController.swift in Sources */,
 				6A4023162BF0DF63007E2664 /* API.swift in Sources */,
 				6AA280C32BF0A0AB00B94298 /* AppDelegate.swift in Sources */,
 			);

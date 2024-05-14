@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vql-hj-ebe">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dGg-rx-XyB">
+            <objects>
+                <navigationController storyboardIdentifier="WelcomeVC" navigationBarHidden="YES" id="Vql-hj-ebe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4xf-Bh-JBz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="WN7-km-SwS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWI-cj-E9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-865" y="12"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconImage" translatesAutoresizingMaskIntoConstraints="NO" id="ab4-rk-5Di">
+                                <rect key="frame" x="30" y="79" width="333" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="bbV-88-8Mz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Summary Analyzer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWz-7M-OGQ">
+                                <rect key="frame" x="20" y="359" width="353" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do7-iO-wgX">
+                                <rect key="frame" x="16" y="412" width="361" height="89.666666666666686"/>
+                                <string key="text">The Text Summary Analyzer App condenses lengthy documents into concise summaries using advanced natural language processing. It saves time by identifying key points and main ideas, making it ideal for students, researchers, and professionals.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k2-wn-lZx">
+                                <rect key="frame" x="17" y="743" width="359" height="55"/>
+                                <color key="backgroundColor" name="LightBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="NKJ-gS-LL4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="27.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="vV1-K8-WPR" kind="show" id="Ugk-vU-roP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6k2-wn-lZx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="17" id="FRh-zw-Pxx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="do7-iO-wgX" secondAttribute="trailing" constant="16" id="QNB-BA-701"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6k2-wn-lZx" secondAttribute="trailing" constant="17" id="UTy-YR-Jc0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6k2-wn-lZx" secondAttribute="bottom" constant="20" id="WWy-Wm-lqI"/>
+                            <constraint firstItem="do7-iO-wgX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Yww-ew-wAr"/>
+                            <constraint firstItem="UWz-7M-OGQ" firstAttribute="top" secondItem="ab4-rk-5Di" secondAttribute="bottom" constant="40" id="bzM-dq-WG1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ab4-rk-5Di" secondAttribute="trailing" constant="30" id="eRK-uG-T3Y"/>
+                            <constraint firstItem="ab4-rk-5Di" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="jgu-ai-Mao"/>
+                            <constraint firstItem="UWz-7M-OGQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="kiC-TW-pdE"/>
+                            <constraint firstItem="ab4-rk-5Di" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="l99-Hg-lhF"/>
+                            <constraint firstItem="do7-iO-wgX" firstAttribute="top" secondItem="UWz-7M-OGQ" secondAttribute="bottom" constant="20" id="lMl-Bb-2d1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UWz-7M-OGQ" secondAttribute="trailing" constant="20" id="qm7-dF-Q1N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="c1U-tE-0eU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="12"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jxm-fA-juK">
+            <objects>
+                <viewController id="vV1-K8-WPR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fn-55-zB3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scantext" translatesAutoresizingMaskIntoConstraints="NO" id="2x7-XJ-wmx">
+                                <rect key="frame" x="30" y="79" width="333" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="HlK-xZ-8Pn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan and Summarize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-H7-ld2">
+                                <rect key="frame" x="20" y="359" width="353" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syt-2b-rr3">
+                                <rect key="frame" x="16" y="412" width="361" height="107.66666666666663"/>
+                                <string key="text">The Scan and Summarize Text feature quickly condenses documents into concise summaries. Using advanced natural language processing, it identifies key points and main ideas, saving time and enhancing productivity. Ideal for students, researchers, and professionals.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Z-g5-IqX">
+                                <rect key="frame" x="17" y="743" width="359" height="55"/>
+                                <color key="backgroundColor" name="LightBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="mIX-fg-7bl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="tintColor" name="LightBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="27.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="GkY-pE-kRR" kind="show" id="R0V-Bm-L3H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7ge-aN-N1t"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="tintColor" name="Backgorund"/>
+                        <constraints>
+                            <constraint firstItem="2x7-XJ-wmx" firstAttribute="leading" secondItem="7ge-aN-N1t" secondAttribute="leading" constant="30" id="3pH-o8-C7o"/>
+                            <constraint firstItem="syt-2b-rr3" firstAttribute="top" secondItem="bQm-H7-ld2" secondAttribute="bottom" constant="20" id="800-SC-re8"/>
+                            <constraint firstItem="7ge-aN-N1t" firstAttribute="trailing" secondItem="bQm-H7-ld2" secondAttribute="trailing" constant="20" id="BR5-R2-nH7"/>
+                            <constraint firstItem="7ge-aN-N1t" firstAttribute="trailing" secondItem="syt-2b-rr3" secondAttribute="trailing" constant="16" id="Cng-gG-bqB"/>
+                            <constraint firstItem="7ge-aN-N1t" firstAttribute="trailing" secondItem="Y1Z-g5-IqX" secondAttribute="trailing" constant="17" id="E5Z-f3-Api"/>
+                            <constraint firstItem="2x7-XJ-wmx" firstAttribute="top" secondItem="7ge-aN-N1t" secondAttribute="top" constant="20" id="RrN-sc-Yhe"/>
+                            <constraint firstItem="7ge-aN-N1t" firstAttribute="trailing" secondItem="2x7-XJ-wmx" secondAttribute="trailing" constant="30" id="Y0B-z9-CJB"/>
+                            <constraint firstItem="7ge-aN-N1t" firstAttribute="bottom" secondItem="Y1Z-g5-IqX" secondAttribute="bottom" constant="20" id="d9I-6v-9MB"/>
+                            <constraint firstItem="syt-2b-rr3" firstAttribute="leading" secondItem="7ge-aN-N1t" secondAttribute="leading" constant="16" id="lIM-oL-1Di"/>
+                            <constraint firstItem="Y1Z-g5-IqX" firstAttribute="leading" secondItem="7ge-aN-N1t" secondAttribute="leading" constant="17" id="pXN-08-0En"/>
+                            <constraint firstItem="bQm-H7-ld2" firstAttribute="top" secondItem="2x7-XJ-wmx" secondAttribute="bottom" constant="40" id="rM9-vK-irr"/>
+                            <constraint firstItem="bQm-H7-ld2" firstAttribute="leading" secondItem="7ge-aN-N1t" secondAttribute="leading" constant="20" id="rzs-Ge-tOP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TlF-JE-Tmi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o04-US-5wS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="12"/>
+        </scene>
+        <!--Welcome End-->
+        <scene sceneID="Ycb-Xm-Dtp">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeEnd" id="GkY-pE-kRR" customClass="WelcomeEnd" customModule="Ai_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IOt-o6-nGG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deatilInfo" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-c1-pZg">
+                                <rect key="frame" x="30" y="79" width="333" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="k5g-og-8et"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUN-oJ-ED5">
+                                <rect key="frame" x="20" y="359" width="353" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-Af-Ast">
+                                <rect key="frame" x="16" y="412" width="361" height="125.33333333333337"/>
+                                <string key="text">Text app is designed to efficiently condense lengthy documents into concise summaries. Leveraging advanced natural language processing algorithms, the app identifies key points, main ideas, and essential information within the text. This enhances productivity by allowing users to quickly grasp the core content.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea9-2T-YfZ">
+                                <rect key="frame" x="17" y="753" width="359" height="55"/>
+                                <color key="backgroundColor" name="LightBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="1y7-zK-lrx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="27.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continue:" destination="GkY-pE-kRR" eventType="touchUpInside" id="5TY-hB-CS2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="riu-8t-nFb"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ea9-2T-YfZ" firstAttribute="leading" secondItem="riu-8t-nFb" secondAttribute="leading" constant="17" id="4MA-cF-x1Q"/>
+                            <constraint firstItem="6hw-Af-Ast" firstAttribute="leading" secondItem="riu-8t-nFb" secondAttribute="leading" constant="16" id="9Ik-iF-NPI"/>
+                            <constraint firstItem="XUN-oJ-ED5" firstAttribute="leading" secondItem="riu-8t-nFb" secondAttribute="leading" constant="20" id="Cje-Rm-fyo"/>
+                            <constraint firstItem="riu-8t-nFb" firstAttribute="trailing" secondItem="t6H-c1-pZg" secondAttribute="trailing" constant="30" id="E0k-BI-TpI"/>
+                            <constraint firstItem="riu-8t-nFb" firstAttribute="trailing" secondItem="ea9-2T-YfZ" secondAttribute="trailing" constant="17" id="ENG-ds-ANo"/>
+                            <constraint firstItem="XUN-oJ-ED5" firstAttribute="top" secondItem="t6H-c1-pZg" secondAttribute="bottom" constant="40" id="HUj-Tz-sXu"/>
+                            <constraint firstItem="t6H-c1-pZg" firstAttribute="top" secondItem="riu-8t-nFb" secondAttribute="top" constant="20" id="KXH-kp-fu4"/>
+                            <constraint firstItem="riu-8t-nFb" firstAttribute="trailing" secondItem="6hw-Af-Ast" secondAttribute="trailing" constant="16" id="Kh3-k0-Rih"/>
+                            <constraint firstItem="6hw-Af-Ast" firstAttribute="top" secondItem="XUN-oJ-ED5" secondAttribute="bottom" constant="20" id="Ly2-Xw-h0t"/>
+                            <constraint firstItem="riu-8t-nFb" firstAttribute="trailing" secondItem="XUN-oJ-ED5" secondAttribute="trailing" constant="20" id="bTM-Fp-xQl"/>
+                            <constraint firstItem="t6H-c1-pZg" firstAttribute="leading" secondItem="riu-8t-nFb" secondAttribute="leading" constant="30" id="fql-3J-wON"/>
+                            <constraint firstItem="riu-8t-nFb" firstAttribute="bottom" secondItem="ea9-2T-YfZ" secondAttribute="bottom" constant="10" id="xT9-RX-ZNV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OF3-ld-uuU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W6k-Ar-d9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617.5572519083969" y="11.971830985915494"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="deatilInfo" width="229" height="221"/>
+        <image name="iconImage" width="229" height="221"/>
+        <image name="scantext" width="229" height="221"/>
+        <namedColor name="Backgorund">
+            <color red="0.14900000393390656" green="0.10199999809265137" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.035000000149011612" green="0.046999998390674591" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightBackgroundColor">
+            <color red="0.11400000005960464" green="0.11800000071525574" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
