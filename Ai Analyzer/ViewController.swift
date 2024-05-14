@@ -21,10 +21,32 @@ class ViewController: UIViewController, GetDataProtocall {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !Manager.isWelcomeDone {
+            DispatchQueue.main.async {
+                let main = UIStoryboard(name: "Welcome", bundle: Bundle.main)
+                let vc = main.instantiateViewController(identifier: "WelcomeVC")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false)
+            }
+        }
+        
+        if !Manager.isPro {
+            showIAP()
+        }
+        
         placeholderLabel.delegate = self
         placeholderLabel.text = Placeholder
         placeholderLabel.textColor = UIColor.lightGray
         APIModels.shared.PlantDetailsDelegate = self
+    }
+    
+    private func showIAP(){
+        DispatchQueue.main.async {
+            let vc = IAPViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: false)
+        }
     }
     
     @IBAction func pasteBut(_ sender: Any) {

@@ -7,6 +7,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import RevenueCat
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,11 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
-        
         IQKeyboardManager.shared.enable = true
         application.isStatusBarHidden = true
         
+        Purchases.logLevel = .error
+        Purchases.configure(withAPIKey: "appl_nPYYnDYhenOWqqkQGEoaininKOM")
+        isPurchasesed()
+        Manager.isnumberofTimesAppOpenKey = Manager.isnumberofTimesAppOpenKey + 1
+        
         return true
+    }
+    
+    func isPurchasesed() {
+        Purchases.shared.getCustomerInfo { (customerInfo, error) in
+            if !(customerInfo?.entitlements.active.isEmpty ?? false) {
+                Manager.isPro = true
+            }else{
+                Manager.isPro = false
+            }
+        }
     }
     
 }
@@ -54,3 +69,5 @@ extension UIApplication {
         return controller
     }
 }
+
+
