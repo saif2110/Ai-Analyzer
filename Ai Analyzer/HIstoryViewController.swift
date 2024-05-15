@@ -11,7 +11,14 @@ class HIstoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        loadSummaryDataArray()?.count ?? 0
+       
+        if loadSummaryDataArray()?.count == 0 {
+            self.tableView.setEmptyMessage("The is no data in the list right now. History will be added here once you use the feature.")
+        } else {
+            self.tableView.restore()
+        }
+        
+        return loadSummaryDataArray()?.count ?? 0
     }
     
     
@@ -68,4 +75,26 @@ class HistoryCell:UITableViewCell {
     @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var titleText: UILabel!
     
+}
+
+
+extension UITableView {
+    
+    func setEmptyMessage(_ message: String) {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        messageLabel.text = message
+        messageLabel.textColor = .black
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+        messageLabel.sizeToFit()
+        
+        self.backgroundView = messageLabel
+        self.separatorStyle = .none
+    }
+    
+    func restore() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
+    }
 }

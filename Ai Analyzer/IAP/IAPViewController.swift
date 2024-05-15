@@ -79,13 +79,13 @@ class IAPViewController: UIViewController {
                 self.selectedPackage = package2
                 
                 
-                let weekPrice = offerings[IPA.Weekly.rawValue]?.lifetime?.localizedPriceString
+                let weekPrice = offerings[IPA.Weekly.rawValue]?.weekly?.localizedPriceString
                 
                 
                // let YearPrice = offerings[IPA.Yearly.rawValue]?.annual?.localizedPriceString
                 
                 
-                self.weekTitle.text = "Unlock a premium experience with our exclusive lifetime offer! Upgrade now to enjoy unlimited features and bid farewell to annoying ads forever, all for a single, unbeatable one-time fee of " + (weekPrice ?? "") + "."
+                self.weekTitle.text = "Unlock a premium experience with our exclusive monthly offer! Upgrade now to enjoy unlimited features and bid farewell to annoying ads forever, all for as low as, unbeatable one month fee of " + (weekPrice ?? "") + "."
               //  self.yearlyTitle.text = (YearPrice ?? "") + " / Year"
                 
                 
