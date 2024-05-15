@@ -12,7 +12,7 @@ class HIstoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        if loadSummaryDataArray()?.count == 0 {
+        if loadSummaryDataArray()?.count == 0 || loadSummaryDataArray()?.count == nil {
             self.tableView.setEmptyMessage("The is no data in the list right now. History will be added here once you use the feature.")
         } else {
             self.tableView.restore()
