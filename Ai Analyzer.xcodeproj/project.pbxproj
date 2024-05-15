@@ -23,6 +23,9 @@
 		6AA280CA2BF0A0AB00B94298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA280C82BF0A0AB00B94298 /* Main.storyboard */; };
 		6AA280CC2BF0A0AC00B94298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA280CB2BF0A0AC00B94298 /* Assets.xcassets */; };
 		6AA280CF2BF0A0AC00B94298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA280CD2BF0A0AC00B94298 /* LaunchScreen.storyboard */; };
+		6AAEC7412BF4D345007BC1EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AAEC7402BF4D345007BC1EB /* GoogleService-Info.plist */; };
+		6AAEC7442BF4D3D5007BC1EB /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 6AAEC7432BF4D3D5007BC1EB /* FirebaseAnalyticsOnDeviceConversion */; };
+		6AAEC7462BF4D3D5007BC1EB /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 6AAEC7452BF4D3D5007BC1EB /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		6AB341602BF28C7E006BA833 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3415F2BF28C7E006BA833 /* TabBarController.swift */; };
 		6AB341622BF28DF4006BA833 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB341612BF28DF4006BA833 /* CameraViewController.swift */; };
 		6AB341642BF38171006BA833 /* HIstoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB341632BF38171006BA833 /* HIstoryViewController.swift */; };
@@ -46,6 +49,7 @@
 		6AA280CB2BF0A0AC00B94298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AA280CE2BF0A0AC00B94298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AA280D02BF0A0AC00B94298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AAEC7402BF4D345007BC1EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6AB3415F2BF28C7E006BA833 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6AB341612BF28DF4006BA833 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6AB341632BF38171006BA833 /* HIstoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIstoryViewController.swift; sourceTree = "<group>"; };
@@ -59,8 +63,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A4023122BF0AB86007E2664 /* IQKeyboardManagerSwift in Frameworks */,
+				6AAEC7462BF4D3D5007BC1EB /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				6A40231D2BF112AD007E2664 /* Lottie in Frameworks */,
 				6A3F1CC92BF3B298006A8AF4 /* RevenueCat in Frameworks */,
+				6AAEC7442BF4D3D5007BC1EB /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +102,7 @@
 		6AA280C12BF0A0AB00B94298 /* Ai Analyzer */ = {
 			isa = PBXGroup;
 			children = (
+				6AAEC7402BF4D345007BC1EB /* GoogleService-Info.plist */,
 				6A3F1CC22BF3B26B006A8AF4 /* IAP */,
 				6AB341652BF3A7B4006BA833 /* Welcome */,
 				6A4023192BF11287007E2664 /* Lottie.json */,
@@ -145,6 +152,8 @@
 				6A4023112BF0AB86007E2664 /* IQKeyboardManagerSwift */,
 				6A40231C2BF112AD007E2664 /* Lottie */,
 				6A3F1CC82BF3B298006A8AF4 /* RevenueCat */,
+				6AAEC7432BF4D3D5007BC1EB /* FirebaseAnalyticsOnDeviceConversion */,
+				6AAEC7452BF4D3D5007BC1EB /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = "Ai Analyzer";
 			productReference = 6AA280BF2BF0A0AB00B94298 /* Ai Analyzer.app */;
@@ -178,6 +187,7 @@
 				6A4023102BF0AB85007E2664 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				6A40231B2BF112AC007E2664 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				6A3F1CC72BF3B298006A8AF4 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+				6AAEC7422BF4D3D5007BC1EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 6AA280C02BF0A0AB00B94298 /* Products */;
 			projectDirPath = "";
@@ -194,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA280CF2BF0A0AC00B94298 /* LaunchScreen.storyboard in Resources */,
+				6AAEC7412BF4D345007BC1EB /* GoogleService-Info.plist in Resources */,
 				6A3F1CC62BF3B26B006A8AF4 /* IAPViewController.xib in Resources */,
 				6A40231A2BF11287007E2664 /* Lottie.json in Resources */,
 				6AA280CC2BF0A0AC00B94298 /* Assets.xcassets in Resources */,
@@ -471,6 +482,14 @@
 				minimumVersion = 4.4.3;
 			};
 		};
+		6AAEC7422BF4D3D5007BC1EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.26.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -488,6 +507,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6A40231B2BF112AC007E2664 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		6AAEC7432BF4D3D5007BC1EB /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AAEC7422BF4D3D5007BC1EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		6AAEC7452BF4D3D5007BC1EB /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AAEC7422BF4D3D5007BC1EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

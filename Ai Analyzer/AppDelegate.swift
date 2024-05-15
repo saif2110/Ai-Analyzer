@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import RevenueCat
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         IQKeyboardManager.shared.enable = true
         application.isStatusBarHidden = true
-        
+        FirebaseApp.configure()
         Purchases.logLevel = .error
         Purchases.configure(withAPIKey: "appl_nPYYnDYhenOWqqkQGEoaininKOM")
         isPurchasesed()
