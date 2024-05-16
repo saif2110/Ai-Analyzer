@@ -85,7 +85,7 @@ class IAPViewController: UIViewController {
                // let YearPrice = offerings[IPA.Yearly.rawValue]?.annual?.localizedPriceString
                 
                 
-                self.weekTitle.text = "Unlock a premium experience with our exclusive monthly offer! Upgrade now to enjoy unlimited features and bid farewell to annoying ads forever, all for as low as, unbeatable one month fee of " + (weekPrice ?? "") + "."
+                self.weekTitle.text = "Try 3 days free & unlock a premium experience with our exclusive yealry offer! Upgrade now to enjoy unlimited features and bid farewell to annoying ads forever, all for as low as, unbeatable yealry fee of " + (weekPrice ?? "") + "."
               //  self.yearlyTitle.text = (YearPrice ?? "") + " / Year"
                 
                 
@@ -241,20 +241,11 @@ struct Manager {
     private static let isProKey = "isPro"
     private static let isWelcomeDoneKey = "isWelcomeDone"
     private static let numberofTimesAppOpenKey = "numberofTimesAppOpen"
+    private static let numberofTimesFeatureUsed = "numberofTimesFeatureUsed"
     private static let depthSelected = "depthSelected"
     private static let queryHit = "queryHit"
     private static let historyArrayKey = "historyArray"
     
-    
-    
-    static var PINis: String {
-        get {
-            return UserDefaults.standard.string(forKey: isPIN) ?? "NA"
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: isPIN)
-        }
-    }
     
     static var isPro: Bool {
         get {
@@ -264,25 +255,7 @@ struct Manager {
             UserDefaults.standard.set(newValue, forKey: isProKey)
         }
     }
-    
-    static var isBlockAd: Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: isBlockAdKey)
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: isBlockAdKey)
-        }
-    }
-    
-    static var isBlockScript: Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: isBlockScriptKey)
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: isBlockScriptKey)
-        }
-    }
-    
+
     
     static var isWelcomeDone: Bool {
         get {
@@ -299,6 +272,16 @@ struct Manager {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: numberofTimesAppOpenKey)
+        }
+    }
+    
+    
+    static var isnumberofTimesFeatureUsed: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: numberofTimesFeatureUsed)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: numberofTimesFeatureUsed)
         }
     }
     
