@@ -39,13 +39,13 @@ class APIModels {
 }
 
 struct SummaryData: Codable {
-    var about, summary, isAI: String?
+    var title, summary, quickinsights: String?
     var keywords: [String]?
     var isEducational: String?
 
     enum CodingKeys: String, CodingKey {
-        case about, summary
-        case isAI = "isAi"
+        case title, summary
+        case quickinsights = "quickinsights"
         case keywords, isEducational
     }
 }

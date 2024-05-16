@@ -23,9 +23,9 @@ class DetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SummaryTitle.text = SummaryData.about?.capitalizingFirstLetter()
+        SummaryTitle.text = SummaryData.title?.capitalizingFirstLetter()
         SummaryDeatils.text = SummaryData.summary?.capitalizingFirstLetter()
-        isAIGenereted.text = SummaryData.isAI?.capitalizingFirstLetter()
+        isAIGenereted.text = SummaryData.quickinsights?.capitalizingFirstLetter()
         
         for i in SummaryData.keywords ?? [] {
             SummaryKeywords.text = (SummaryKeywords.text ?? "") + i + " , "

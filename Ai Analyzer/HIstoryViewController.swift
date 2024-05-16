@@ -27,8 +27,8 @@ class HIstoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: HistoryCell.name, for: indexPath) as! HistoryCell
         
         let data = loadSummaryDataArray()?[indexPath.row]
-        cell.titleText.text = data?.about
-        cell.descriptionText.text = data?.about
+        cell.titleText.text = data?.title
+        cell.descriptionText.text = data?.summary
         
         return cell
     }
