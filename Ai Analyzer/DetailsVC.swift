@@ -103,6 +103,12 @@ extension UIViewController{
 func saveSummaryDataArray(_ summaryData: SummaryData) {
     var loadArray = loadSummaryDataArray() ?? []  // Initialize to an empty array if nil
     loadArray.append(summaryData)
+    
+    // Ensure the array does not exceed 30 elements
+    if loadArray.count > 30 {
+        loadArray.removeFirst()  // Remove the oldest element
+    }
+
     let encoder = JSONEncoder()
     if let encoded = try? encoder.encode(loadArray) {
         UserDefaults.standard.set(encoded, forKey: "SummaryDataArray")
@@ -114,7 +120,7 @@ func loadSummaryDataArray() -> [SummaryData]? {
     if let savedSummaryData = UserDefaults.standard.object(forKey: "SummaryDataArray") as? Data {
         let decoder = JSONDecoder()
         if let loadedSummaryData = try? decoder.decode([SummaryData].self, from: savedSummaryData) {
-            return loadedSummaryData
+            return loadedSummaryData.reversed()
         }
     }
     return nil
