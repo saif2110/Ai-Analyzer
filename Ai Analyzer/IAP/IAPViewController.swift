@@ -13,7 +13,7 @@ import StoreKit
 let mainColor = #colorLiteral(red: 0.2953208983, green: 0.5, blue: 0.8996046782, alpha: 1)
 
 enum IPA:String {
-    case Weekly = "AiSummariserWeekly"
+    case Weekly = "AiSummariserWeek"
 }
 
 var isProTrigger:(() -> ())?
@@ -85,7 +85,7 @@ class IAPViewController: UIViewController {
                // let YearPrice = offerings[IPA.Yearly.rawValue]?.annual?.localizedPriceString
                 
                 
-                self.weekTitle.text = "Try 3 days free & unlock a premium experience with our exclusive yealry offer! Upgrade now to enjoy unlimited features and bid farewell to annoying ads forever, all for as low as, unbeatable yealry fee of " + (weekPrice ?? "") + "."
+                self.weekTitle.text = "Try 3 days free & unlock a premium experience with our exclusive offer! Upgrade now to enjoy unlimited features and bid farewell to annoying ads forever, all for as low as " + (weekPrice ?? "") + " week."
               //  self.yearlyTitle.text = (YearPrice ?? "") + " / Year"
                 
                 

@@ -38,9 +38,9 @@ class APIRequest {
               let task = session.dataTask(with: request) { data, response, error in
                   if let data = data {
                       do {
-                          if let jsonString = String(data: data, encoding: .utf8) {
-                                         print("Raw JSON data: \(jsonString)")
-                                     }
+//                          if let jsonString = String(data: data, encoding: .utf8) {
+//                                         print("Raw JSON data: \(jsonString)")
+//                                     }
                           let jsonDecoder = JSONDecoder()
                           let userData = try! jsonDecoder.decode(model, from: data)
                           DispatchQueue.main.async {
