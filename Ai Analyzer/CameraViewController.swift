@@ -88,7 +88,7 @@ class CameraViewController: UIViewController, DataScannerViewControllerDelegate 
         
         let texts = splitTextIntoThreeParts(text: placeholderLabel)
         
-        APIModels.shared.hitapi(params: ["startingText" : texts.start,"midText":texts.mid,"endText":texts.end, "length": "medium"])
+        APIModels.shared.hitapi(params: ["startingText" : texts.start,"midText":texts.mid,"endText":texts.end, "length": "medium","isPRO" : String(Manager.isPro)])
         
         self.scannerViewController.stopScanning()
         

@@ -11,6 +11,7 @@ import Lottie
 class Loading: UIViewController,GetDataProtocall {
     
     func getData(data: SummaryData) {
+        print("title is",data.title)
         self.dismiss(animated: true) {
             if let topController = UIApplication.topViewController() {
                 DispatchQueue.main.async {

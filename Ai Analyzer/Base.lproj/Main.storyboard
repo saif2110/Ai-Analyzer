@@ -24,12 +24,12 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Ybu-RW-y95"/>
                         <segue destination="o2c-HC-tww" kind="relationship" relationship="viewControllers" id="4tU-6F-kSP"/>
-                        <segue destination="WrV-hc-S4c" kind="relationship" relationship="viewControllers" id="Kse-gh-eEn"/>
+                        <segue destination="WrV-hc-S4c" kind="relationship" relationship="viewControllers" id="OOg-Ct-0TD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHF-gw-whA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1057" y="296"/>
+            <point key="canvasLocation" x="-1039" y="358"/>
         </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
@@ -267,7 +267,7 @@ iOS : Special, Special Native Image Animation, Deep link migration</string>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❛ Keywords:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyx-wY-c6X">
                                                 <rect key="frame" x="20" y="342.33333333333337" width="353" height="22.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
-                                                <color key="textColor" name="TintColor"/>
+                                                <color key="textColor" red="0.15686274509803921" green="0.62745098039215685" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-Cn-7F7">
@@ -409,7 +409,7 @@ iOS : Special, Special Native Image Animation, Deep link migration</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="LightBackgroundColor"/>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="zsC-9m-EUS" firstAttribute="leading" secondItem="2mR-PK-v9w" secondAttribute="trailing" constant="12" id="57M-bi-fwx"/>
                                     <constraint firstItem="zsC-9m-EUS" firstAttribute="centerY" secondItem="2mR-PK-v9w" secondAttribute="centerY" id="B0c-cr-Vio"/>
@@ -464,6 +464,120 @@ iOS : Special, Special Native Image Animation, Deep link migration</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nkb-0T-a5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="555" y="1448"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="lpI-g6-vFT">
+            <objects>
+                <viewController id="G7v-E4-pyW" customClass="WatingQueueViewController" customModule="Ai_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ae6-iq-mNb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3t-zf-fA5" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="30" y="69" width="333" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Nat-21-Nzu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="Wait"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Queue..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgx-eF-LaJ">
+                                <rect key="frame" x="16" y="457" width="361" height="37"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="33"/>
+                                <color key="textColor" red="0.15686274510000001" green="0.62745098040000002" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Ai is currently experiencing a high volume of requests." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9a-WB-1II">
+                                <rect key="frame" x="20" y="505.99999999999994" width="353" height="49.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wating time is 12 minutes. With Premium, there's no waiting—you'll get your results instantly." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mle-0G-d9m">
+                                <rect key="frame" x="20" y="567.33333333333337" width="353" height="69.666666666666629"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrX-ye-qJn">
+                                <rect key="frame" x="14" y="677" width="365" height="55"/>
+                                <color key="backgroundColor" name="TintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="rge-Ie-i1h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="  Upgrade &amp; skip queue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="crown.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcU-S1-8n3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvq-OR-ucm">
+                                <rect key="frame" x="14" y="748" width="365" height="55"/>
+                                <color key="backgroundColor" name="LightBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="zgn-xA-Jg3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="  Try again later !">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="repeat" catalog="system" symbolScale="large"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="geP-Hg-4pI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NI8-Hj-UbT"/>
+                        <color key="backgroundColor" red="0.035294117647058823" green="0.047058823529411764" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NI8-Hj-UbT" firstAttribute="trailing" secondItem="jrX-ye-qJn" secondAttribute="trailing" constant="14" id="3kF-GM-vxy"/>
+                            <constraint firstItem="L9a-WB-1II" firstAttribute="top" secondItem="hgx-eF-LaJ" secondAttribute="bottom" constant="12" id="92W-Pf-ge1"/>
+                            <constraint firstItem="jrX-ye-qJn" firstAttribute="top" secondItem="Mle-0G-d9m" secondAttribute="bottom" constant="40" id="BE3-r4-f1Y"/>
+                            <constraint firstItem="jrX-ye-qJn" firstAttribute="leading" secondItem="NI8-Hj-UbT" secondAttribute="leading" constant="14" id="Mol-dM-38n"/>
+                            <constraint firstAttribute="trailing" secondItem="Mle-0G-d9m" secondAttribute="trailing" constant="20" id="Rgs-9J-8K9"/>
+                            <constraint firstItem="NI8-Hj-UbT" firstAttribute="bottom" secondItem="vvq-OR-ucm" secondAttribute="bottom" constant="15" id="SkZ-hT-gzG"/>
+                            <constraint firstItem="C3t-zf-fA5" firstAttribute="leading" secondItem="NI8-Hj-UbT" secondAttribute="leading" constant="30" id="UVc-6X-0XC"/>
+                            <constraint firstItem="vvq-OR-ucm" firstAttribute="leading" secondItem="NI8-Hj-UbT" secondAttribute="leading" constant="14" id="Z1L-59-jlA"/>
+                            <constraint firstItem="C3t-zf-fA5" firstAttribute="top" secondItem="NI8-Hj-UbT" secondAttribute="top" constant="10" id="ZcC-h2-Sk4"/>
+                            <constraint firstItem="NI8-Hj-UbT" firstAttribute="trailing" secondItem="vvq-OR-ucm" secondAttribute="trailing" constant="14" id="ZdK-cp-CcZ"/>
+                            <constraint firstItem="Mle-0G-d9m" firstAttribute="leading" secondItem="NI8-Hj-UbT" secondAttribute="leading" constant="20" id="d7b-Ec-XXt"/>
+                            <constraint firstItem="Mle-0G-d9m" firstAttribute="top" secondItem="L9a-WB-1II" secondAttribute="bottom" constant="12" id="dMl-Pj-1yw"/>
+                            <constraint firstItem="NI8-Hj-UbT" firstAttribute="trailing" secondItem="L9a-WB-1II" secondAttribute="trailing" constant="20" id="iSc-s1-5pH"/>
+                            <constraint firstItem="vvq-OR-ucm" firstAttribute="top" secondItem="jrX-ye-qJn" secondAttribute="bottom" constant="16" id="lJC-l7-qZf"/>
+                            <constraint firstItem="NI8-Hj-UbT" firstAttribute="trailing" secondItem="C3t-zf-fA5" secondAttribute="trailing" constant="30" id="lxT-hc-LPq"/>
+                            <constraint firstItem="NI8-Hj-UbT" firstAttribute="trailing" secondItem="hgx-eF-LaJ" secondAttribute="trailing" constant="16" id="pFj-Ou-VwV"/>
+                            <constraint firstItem="L9a-WB-1II" firstAttribute="leading" secondItem="NI8-Hj-UbT" secondAttribute="leading" constant="20" id="tJy-dQ-29Q"/>
+                            <constraint firstItem="hgx-eF-LaJ" firstAttribute="leading" secondItem="NI8-Hj-UbT" secondAttribute="leading" constant="16" id="vrV-DX-zX8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="yoO-vh-vFR"/>
+                    <connections>
+                        <outlet property="lottie" destination="C3t-zf-fA5" id="fCk-HK-bec"/>
+                        <outlet property="mainTitle" destination="Mle-0G-d9m" id="u6B-an-if6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7M-vc-fJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1311" y="1448"/>
         </scene>
         <!--History-->
         <scene sceneID="9kR-q7-zc6">
@@ -737,12 +851,14 @@ iOS : Special, Special Native Image Animation, Deep link migration</string>
     <resources>
         <image name="chevron.forward" catalog="system" width="97" height="128"/>
         <image name="clock" catalog="system" width="128" height="123"/>
+        <image name="crown.fill" catalog="system" width="128" height="92"/>
         <image name="doc.on.clipboard" catalog="system" width="116" height="128"/>
         <image name="doc.on.doc" catalog="system" width="116" height="128"/>
         <image name="home" width="25" height="25"/>
         <image name="iconImage" width="229" height="221"/>
         <image name="magic-wand" width="25" height="25"/>
         <image name="quote.bubble.rtl" catalog="system" width="128" height="110"/>
+        <image name="repeat" catalog="system" width="128" height="98"/>
         <image name="save" width="25" height="25"/>
         <image name="scan" width="60.666667938232422" height="60.666667938232422"/>
         <image name="speaker.wave.3" catalog="system" width="128" height="84"/>

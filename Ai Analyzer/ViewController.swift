@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, GetDataProtocall {
     
     func getData(data: SummaryData) {
-        print(data)
+        //print(data)
     }
     
     var lengthOfSummary = "medium"
@@ -78,12 +78,12 @@ class ViewController: UIViewController, GetDataProtocall {
     
     @IBAction func submitButton(_ sender: Any) {
         
-        if !Manager.isPro {
-            guard Manager.isnumberofTimesFeatureUsed < 3 else {
-                showIAP()
-                return
-            }
-        }
+//        if !Manager.isPro {
+//            guard Manager.isnumberofTimesFeatureUsed < 3 else {
+//                showIAP()
+//                return
+//            }
+//        }
 
         guard placeholderLabel.text.count > 3 else { return }
         guard placeholderLabel.text != Placeholder else { return }
@@ -99,9 +99,7 @@ class ViewController: UIViewController, GetDataProtocall {
         
         Manager.isnumberofTimesFeatureUsed += 1
        
-        APIModels.shared.hitapi(params: ["startingText" : texts.start,"midText":texts.mid,"endText":texts.end, "length": lengthOfSummary])
-        
-        
+        APIModels.shared.hitapi(params: ["startingText" : texts.start,"midText":texts.mid,"endText":texts.end, "length": lengthOfSummary,"isPRO":String(Manager.isPro)])
         
     }
     
