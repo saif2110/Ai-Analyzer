@@ -15,7 +15,7 @@ class WatingQueueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainTitle.text = "Our Ai i experiencing a high volume of requests. Wating time \(String(Int.random(in: 7...15))) minutes."
+        mainTitle.text = "Our Ai experiencing a high volume of requests. Wating time \(String(Int.random(in: 7...15))) minutes."
         
         lottie.loopMode = .loop
         lottie.play()
