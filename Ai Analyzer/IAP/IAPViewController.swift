@@ -13,7 +13,7 @@ import StoreKit
 let mainColor = #colorLiteral(red: 0.2953208983, green: 0.5, blue: 0.8996046782, alpha: 1)
 
 enum IPA:String {
-    case Weekly = "AiSummariserWeek"
+    case Weekly = "AiSummariserWeekNew"
 }
 
 var isProTrigger:(() -> ())?
